@@ -6,11 +6,16 @@
     <title>Banque du peuple</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
 </head>
 <body>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> 
+
 <!------ Include the above in your HEAD tag ---------->
 
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-primary">
@@ -21,6 +26,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <a class="navbar-brand" href="/codeIn/public/">Home</a>
+    <a class="navbar-brand" href="/codeIn/public/Moral/save">Ajouter moral</a>
+    <a class="navbar-brand" href="/codeIn/public/Moral/show">Liste moral</a>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,8 +36,8 @@
           Client Moral
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeIn/public/Moral/show/add">Ajouter client moral</a>
-          <a class="dropdown-item" href="/codeIn/public/Moral/show/liste">Liste client moral</a>
+          <a class="dropdown-item" href="/codeIn/public/Moral/save">Ajouter client moral</a>
+          <a class="dropdown-item" href="/codeIn/public/Moral/show">Liste client moral</a>
         </div>
       </li>
 
@@ -41,7 +48,7 @@
           Client Physique
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeIn/public/Physique/show/add">Ajouter client physique</a>
+          <a class="dropdown-item" href="/codeIn/public/Physique/insert/add">Ajouter client physique</a>
           <a class="dropdown-item" href="/codeIn/public/Physique/show/liste">Liste client physique</a>
         </div>
       </li>
@@ -52,7 +59,7 @@
           Comptes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeIn/public/Compte/show/add">creer compte</a>
+          <a class="dropdown-item" href="/codeIn/public/Compte/insert/add">creer compte</a>
           <a class="dropdown-item" href="/codeIn/public/Compte/show/liste">Liste comptes</a>
         </div>
       </li>

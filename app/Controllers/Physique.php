@@ -1,17 +1,20 @@
 <?php namespace App\Controllers;
 
+use App\Models\PhysiqueModel;
+
 class Physique extends BaseController
 {
-	public function index()
-	{
-		echo "Bonjour je suis dans la salle";
-	}
-
-	public function show($physique = '')
-	{
-        
+	public function insert($physique)
+	{   
         echo view('templates/header');
-        echo view('physique/'.$physique);
+        echo view('physique/add');
+        echo view('templates/footer');
+    }
+    
+    public function show($physique)
+	{   
+        echo view('templates/header');
+        echo view('physique/liste');
         echo view('templates/footer');
 	}
 

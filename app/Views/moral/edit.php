@@ -1,45 +1,48 @@
 <section>
 <div class="jumbotron">
-
-        <div class="container">
-    <br>
+ <div class="container">
+<br>
     <?= \Config\Services::validation()->listErrors(); ?>
  
     <span class="d-none alert alert-success mb-3" id="res_message"></span>
  
     <div class="row">
       <div class="col-md-9">
-        <form action="/codeIn/public/Moral/store" name="add" id="user_create" method="post" accept-charset="utf-8">
+        <form action="codeIn/public/Moral/update" name="edit" id="edit-user" method="post" accept-charset="utf-8">
  
+
+                        <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $moral['id'] ?>">
+
                         <div class="form-group">
                             <label for="">Nom</label>
-                            <input class="form-control" type="text" name="nomEmpl"required>
+                            <input class="form-control" type="text" name="nomEmpl" value="<?php echo $moral['nomEmpl'] ?>">
                         </div>
                 
                         <div class="form-group">
                             <label for="">Ninea</label>
-                            <input class="form-control" type="text" name="ninea" required>
+                            <input class="form-control" type="text" name="ninea" value="<?php echo $moral['ninea'] ?>">
                         </div>
                 
                         <div class="form-group">
                             <label for="">Registre de commerce</label>
-                            <input class="form-control" type="text" name="rc" required>
+                            <input class="form-control" type="text" name="rc" value="<?php echo $moral['rc'] ?>">
                         </div>
                 
                         <div class="form-group">
                             <label for="">Raison Sociale</label>
-                            <input class="form-control" type="text" name="raisonSocial" required>
+                            <input class="form-control" type="text" name="raisonSocial" value="<?php echo $moral['raisonSocial'] ?>">
                         </div>
                 
                         <div class="form-group">
                             <label for="">Adresse</label>
-                            <input class="form-control" type="text" name="adressEmpl" required>
+                            <input class="form-control" type="text" name="adressEmpl" value="<?php echo $moral['adressEmpl'] ?>">
                         </div>
                 
                         <div class="form-group">
-                            <input class="btn btn-success" type="submit" name="valider" value="Envoyer">
+                            <input class="btn btn-success" type="submit" name="valider" value="Modifier">
                             <input class="btn btn-danger" type="reset" name="annuler" value="Annuler">
                         </div>
+          
         </form>
       </div>
  
@@ -47,8 +50,8 @@
   
 </div>
  <script>
-   if ($("#user_create").length > 0) {
-      $("#user_create").validate({
+   if ($("#edit-user").length > 0) {
+      $("#edit-user").validate({
       
     rules: {
       name: {
@@ -75,6 +78,4 @@
   })
 }
 </script>
-</div>
-</div>
 </section>
